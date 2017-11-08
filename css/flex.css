@@ -1,0 +1,44 @@
+fieldset{
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+form{
+	display: flex;
+	flex-wrap: wrap;
+}
+input[type="checkbox"],
+input[type="radio"]{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (min-width: 768px){
+	form{
+		flex-direction: column;
+	}
+	.labelsone{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+
+	}
+.name,
+.mail,
+.tel,
+.address,
+.city,
+.country,
+.zipcode{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+label{
+	flex: 2;
+}
+}
