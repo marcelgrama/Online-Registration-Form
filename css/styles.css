@@ -3,6 +3,7 @@
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
 }
+
 .header{
 width: 100%;
 text-transform: uppercase;
@@ -20,7 +21,8 @@ box-sizing: content-box;
 border: none;
 -webkit-border-radius: 60px;
 border-radius: 60px;
-font: normal Arial, Helvetica, sans-serif;
+font-family: 'Merriweather', serif;
+font: normal 'Merriweather',Arial, Helvetica, sans-serif;
 color: rgba(255,255,255,1);
 -o-text-overflow: ellipsis;
 text-overflow: ellipsis;
@@ -40,18 +42,40 @@ border-bottom: double 10px;
 
 }
 .signup{
+font-family: 'Sofia';
+font: normal 'Sofia',Arial, Helvetica, sans-serif;
 text-shadow: 0 0 20px rgba(255,255,255, 0.5) , 6px 7px 20px rgba(48,48,48,1) ;
+transition: all .5s ease-out
+}
+a {
+text-decoration: none;
+color: transparent;
+}
+.signup:hover{
+	font-size: 27px;
 }
 .firstpara{
 opacity: .5;
 }
 
 .bodycontent{
+	font-family: 'Ubuntu';
+font: bolder 'Ubuntu',Arial, Helvetica, sans-serif;
 width: 90%;
 padding-top: 40px;
 margin-left: 5%;
+background-color: rgba(246, 249, 214, 1);
 }
+.name,
+.mail,
+.tel,
+.address,
+.city,
+.country,
+.zipcode{
+width: 60%;
 
+}
 legend{
 font-size: 1.5em;
 font-weight: bold;
@@ -66,17 +90,19 @@ font-size: 0.8em;
 margin-right: 4px;
 line-height: 30px;
 text-align: center;
-text-shadow: 0 1px 1px 0 rgba(255,255,255,0.8);
+text-shadow: 0 1px 1px rgba(255,255,255,0.8);
 border-radius: 100%;
 
 }
 fieldset{
 border:none;
 }
+
 form{
 width: 90%;
 margin-left: 5%;
 padding: 10px 5px;
+
 }
 input[type="text"],
 input[type="email"],
@@ -84,12 +110,11 @@ input[type="tel"],
 select,
 textarea
 {
-/*max-width: 90%;*/
-width: 100%;
 border:none;
 background-color: lightgrey;
 border-radius: 10px;
-font-size: 2em;
+font-size: 1em;
+height: 2.5em;
 opacity: 0.6;
 margin: 10px 0px;
 box-shadow: 0px 15px 20px -12px rgba(0, 0, 0 , .8);
@@ -100,7 +125,7 @@ height: 100px;
 }
 
 input[type="placeholder"]{
-font-size: 0.5em;
+font-size: 0.1em;
 text-align: right;
 }
 button[type="submit"]{
@@ -126,7 +151,41 @@ text-shadow: 1px 1px #000,
 cursor: pointer;
 }
 label{
+	width: 100%;
 margin-top: 15px;
+
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+   transition: all .3s ease-out
+}
+input[type="text"]:focus{
+	height: 50px;
+	border-color: #777;
+    color: #000;
+    background: #00a3ef;
+    outline: 0}
+input[type="email"]:focus{
+	height: 50px;
+	border-color: #777;
+    color: #000;
+    background: #00a3ef;
+    outline: 0}
+input[type="tel"]:focus{
+	height: 50px;
+	border-color: #777;
+    color: #000;
+    background: #00a3ef;
+    outline: 0}
+textarea:focus{
+	height: 120px;
+	border-color: #777;
+    color: #000;
+    background: #00a3ef;
+    outline: 0
+
 }
 .editlabel:hover{
 position: relative; 
@@ -142,6 +201,17 @@ text-shadow: 1px 1px #000,
 .othertopics{
 text-align: center;
 }
+.newsletterpara,
+.newsletterformat{
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+.footerclass{
+	opacity: 0.5;
+	text-align: center;
+	margin-top: 30px;
+}
+
 /*COMBINATORS*/
 
 legend ~ label {
@@ -155,29 +225,47 @@ font-size: 1.25em;
 .bodycontent{
 	width: 60%;
 	margin-left: 20%;
+	background-color: transparent;
+}
+.name,
+.mail,
+.tel,
+.address,
+.city,
+.country,
+.zipcode{
+width: 100%;
+
+}
+.labelsone,
+.labeltwo{
+	background-color: rgba(246, 249, 214, 1);
+	transition: all 1s ease-out
 }
 
+
+.labelsone:hover{
+	
+	
+    background-color: rgba(251, 255, 137, 1);
+    outline: 0}
+.labeltwo:hover{
+	
+	
+    background-color: rgba(251, 255, 137, 1);
+    outline: 0}
 label{
 	margin-left: auto;
 }
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea
- {
-	/*max-width: 90%;*/
-	width: 50%;
-	
- }
-
 textarea{
 width: 100%;
+}
+fieldset{
+	width: 100%;
 }
 .othertopics{
 text-align: left;
 padding-top: 25px;
 margin-bottom: 0px;
-
 }
 }

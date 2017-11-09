@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/flex.css" />
     <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
 </head>
 <body>
 	<header class="header">
-		<h2 class="desc">The code review</h1>
+		<h2 class="desc">The code review</h2>
 	</header>
 <div class="firstcontent">
 	<h2 class="signup">Sign up for our newsletter</h2>
@@ -25,27 +28,27 @@
 	<div class="labelsone">
 	<div class="name">
 	<label for="name"><span class="editlabel">Full Name</span></label>
-	<input type="text" id="name" name="user_name" placeholder="Required...">
+	<input required type="text" id="name" name="user_name" placeholder="Required...">
 	</div>
 
 	<div class="mail">
 	<label for="mail"><span class="editlabel">Email Address</span></label>
-	<input type="email" id="mail" name="user_mail" placeholder="Required...">
+	<input required type="email" id="mail" name="user_mail" placeholder="Required...">
 	</div>
 
 	<div class="tel">
 	<label for="tel"><span class="editlabel">Phone Number</span></label>
-	<input type="tel" id="tel" name="user_tel">
+	<input required type="tel" id="tel" name="user_tel">
 	</div>
 
 	<div class="address">
 	<label for="address"><span class="editlabel">Street Address</span></label>
-	<input type="text" id="address" name="user_address">
+	<input required type="text" id="address" name="user_address">
 	</div>
 
 	<div class="city">
 	<label for="city"><span class="editlabel">City</span></label>
-	<input type="text" id="city" name="user_city">
+	<input required type="text" id="city" name="user_city">
 	</div>
 
 	<div class="country">
@@ -320,7 +323,7 @@
 
 	<div class="zipcode">
 	<label for="zipcode"><span class="editlabel">Zip Code</span></label>
-	<input class="align" type="text" id="zipcode" name="quantity" maxlength="10">
+	<input required class="align" type="text" id="zipcode" name="quantity" maxlength="10">
 	</div>
 		</div>
 	</fieldset>
@@ -328,15 +331,38 @@
 		<legend><span class="number">2</span>Newsletter</legend>
 	
 		<p class="newsletterpara">Select the newsletters you would like to receive</p>
-		<input type="checkbox" name="news" value="html"  checked> HTML News
-		<input type="checkbox" name="news" value="css" checked> CSS News
-		<input type="checkbox" name="news" value="javascript" checked> Javascript News
 
-		<p class="newsletterformat">Newsletter format</p>
-		<input type="radio" name="format" value="htmlformat" checked> HTML
-		<input type="radio" name="format" value="plaintext"> Plain Text
+		<div class="labeltwo">
 
-		<p class="othertopics">Other topics you'd like to hear about</p>
+        <div class="html_news">
+		<label for="html_news" class="padding">HTML News</label> 
+		<input type="checkbox" name="news" id ="html_news" value="html"  checked>
+		</div>
+
+        <div class="css_news">       
+		<label for="css_news" class="padding">CSS News</label> 
+		<input type="checkbox" name="news" id ="css_news" value="css" checked>
+		</div>
+
+		<div class="js_news">
+		<label for="js_news" class="padding">Javascript News</label> 
+		<input type="checkbox" name="news" id ="js_news" value="javascript" checked>
+		</div>
+
+		<p class="newsletterformat"> Newsletter format</p>
+
+		<div class="html">
+		<input type="radio" name="format" id="html" value="htmlformat" checked> 
+		<label for="html" class="padding">HTML</label>
+		</div>
+
+		<div class="text">
+		<input type="radio" name="format" id="text" value="plaintext"> 
+		<label for="text" class="padding">Plain Text</label> 
+		</div>
+
+	</div>
+		<label for="txtarea" class="othertopics">Other topics you'd like to hear about</label> 
 		​<textarea id="txtarea" name="user_txtarea"></textarea>
 
 		<button type="submit">Sign Up</button>
@@ -344,7 +370,11 @@
 	</form>
 
 </div>
-
+<footer class="main-footer">
+		<div class="footerclass">
+			<span>Copyright The Code Review</span>
+		</div>
+	</footer>
 
 </body>
 
